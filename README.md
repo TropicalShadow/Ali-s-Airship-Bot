@@ -43,7 +43,7 @@ Distributed under the GNU General Public License v3.0. See ``LICENSE`` for more 
 [discord-image]: https://img.shields.io/discord/874025484390899732?color=blue&label=Discord&logo=Discord&style=flat-square
 [guild-invite]: https://discord.gg/JhUUgZFSdR
 
-[dev-image]: https://img.shields.io/Discord/862312953738559489?color=blue&label=Dev%20Discord&logo=Discord&style=flat-square
+[dev-image]: https://img.shields.io/discord/862312953738559489?color=blue&label=Dev%20Discord&logo=Discord&style=flat-square
 [dev-url]: https://discord.gg/nxxTu9DZG5
 
 [stars]: https://img.shields.io/github/stars/TropicalShadow/Ali-s-Airship-Bot?logo=github&style=flat-square

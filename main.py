@@ -15,8 +15,9 @@ print ("Discord Version:",__version__)
 print ("Loading Bot, Please Wait")
 
 @bot.command(pass_context=True)
-async def bonk(ctx,*args,**kwargs):
-    await ctx.send(content=f':eyes:',delete_after=3)
+async def ping(ctx,*args,**kwargs):
+    await ctx.message.delete()
+    await ctx.send(content=f'Pong',delete_after=3)
 
 cogs = sorted(listdir("./modules"))
 for cog in cogs:

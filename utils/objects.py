@@ -18,4 +18,5 @@ class Guild:
 class AliBot(Bot):
     Tick = "\u2705"
     Cross = "\u274C"
+    server = 874025484390899732
     guild = Guild()

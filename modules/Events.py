@@ -28,6 +28,7 @@ class Events(Cog):
     async def whenBotBeReady(self):
         if(self.ready):return
         DiscordComponents(self.bot)
+        print("-----------------------")
         print("Bot is ready.")
         print(f"Name: {self.bot.user}")
         print(f"ID: {self.bot.user.id}")
