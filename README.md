@@ -22,6 +22,10 @@ pip install -r requirements.txt
   * The raw basics
 * 0.0.1
   * README.md corrections & License added
+* 0.0.2
+  * Join & Leave manager, Welcome message, verification system.
+* 0.0.3
+  * Dev commands, README update
 
 ## Meta
 
@@ -34,10 +38,11 @@ Distributed under the GNU General Public License v3.0. See ``LICENSE`` for more 
 ## Contributing
 
 1. Fork it [here](<https://github.com/TropicalShadow/Ali-s-Airship-Bot/fork>).
-2. Create your feature branch (`git checkout -b feature/coolnewthing`)
-3. Commit your changes (`git commit -am 'add cool new thing'`)
-4. Push to the branch (`git push origin feature/coolnewthing`)
-5. Create a new Pull Request
+2. update ``README.md`` to be with updated content.
+3. Create your feature branch (`git checkout -b feature/coolnewthing`).
+4. Commit your changes (`git commit -am 'add cool new thing'`).
+5. Push to the branch (`git push origin feature/coolnewthing`).
+6. Create a new Pull Request.
 
 <!-- Markdown link & img dfn's -->
 [discord-image]: https://img.shields.io/discord/874025484390899732?color=blue&label=Discord&logo=Discord&style=flat-square
