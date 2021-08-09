@@ -175,8 +175,9 @@ class WelcomeSystem(Cog):
         mainImageFile.seek(0)
         return File(mainImageFile,"Welcome.png")
 
-    @commands.Cog.listener(name="on_member_join")
-    async def sendWelcomeMessage(self,member):
+    @commands.Cog.listener(name="on_member_update")
+    async def sendWelcomeMessage(self,before, join):
+        if((before.pending == after.pending) or after.pending == False)
         guild = member.guild
         WelcomeChannel = guild.system_channel
         emb = Embed(timestamp=datetime.utcnow(),description=f"Please read the {self.bot.get_channel(self.rules_channel_id).mention} to avoid getting banned.",color=Colour.green())
