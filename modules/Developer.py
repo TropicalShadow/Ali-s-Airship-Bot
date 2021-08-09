@@ -1,10 +1,18 @@
+from utils.decorators import decorators
 from discord.ext.commands import Cog
 from discord.ext import commands
-from utils.decorators import decorators
+from random import choice
+
 
 class Developer(Cog):
     def __init__(self,bot):
         self.bot = bot
+
+    @decorators.isTrop()
+    @commands.command(name='die')
+    async def death(self, ctx, *args):
+        await ctx.send(content=choice(["Till death do us part","i went bonk",f"{self.bot.user.name} left the chat"]))
+        quit()
 
     @decorators.isTrop()
     @commands.command(name='reload')

@@ -1,5 +1,6 @@
 from discord import __version__, Intents
 from utils.objects import AliBot
+from dotenv import load_dotenv
 from os import listdir
 
 with open("TOKEN.key","r") as fp:
@@ -10,6 +11,7 @@ command_prefix = ("-",)
 
 intents = Intents.all()
 bot = AliBot(command_prefix=command_prefix,description=description,intents=intents)
+load_dotenv()
 
 print ("Discord Version:",__version__)
 print ("Loading Bot, Please Wait")

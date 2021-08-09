@@ -1,3 +1,4 @@
 discord.py[voice]
 discord-components
 pillow
+python-dotenv
