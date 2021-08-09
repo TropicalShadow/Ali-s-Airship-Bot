@@ -177,7 +177,7 @@ class WelcomeSystem(Cog):
 
     @commands.Cog.listener(name="on_member_update")
     async def sendWelcomeMessage(self, before, after):
-        if((before.pending == after.pending) or after.pending == False): return
+        if((before.pending == after.pending) or after.pending == True): return
         member = after
         guild = member.guild
         WelcomeChannel = guild.system_channel
