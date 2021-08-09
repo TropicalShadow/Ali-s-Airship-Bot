@@ -26,9 +26,17 @@ class JoinLeaveManager(Cog):
 
     @commands.Cog.listener(name="on_member_remove")
     async def WhenSomeoneLeaves(self,member):
-        channel = self.bot.get_channel(self.joinleave_channel_id)
-        emb = self.makeEmbed(description=f"{member} left",Colour=Colour.red())
-        await channel.send(embed=emb)
+        emb = Embed(
+                description=f"{member.mention} `{str(member)}` left {member.guild}",
+                colour=Colour.red(),
+                timestamp=datetime.now(timezone.utc)
+            )
+        emb.set_author(name=f'{str(member)}',
+                        icon_url=member.avatar_url)
+        emb.set_footer(
+            text=f"RealName_123#3570 | {self.bot.user.name} Bot", icon_url=self.bot.user.avatar_url)
+        for i in self.joinLeaveStaffChannel:
+            await self.bot.get_channel(i).send(embed=emb)
 
     async def bot_join(self, bot):
         embed = self.makeEmbed(title="Bot Joined",description=f"{bot} has joined the server.",Colour=Colour.blurple())
@@ -106,10 +114,8 @@ class JoinLeaveManager(Cog):
             inviter = await member.guild.get_member(theInvite.inviter)
         
         emb =self.makeEmbed(title=f"{member.display_name} Joined from {inviter.display_name}",description=f"Member: {member.mention}\nMember_id: {member.id}\nJoinTime: {member.joined_at}\nCode: {theInvite.code}\nlink: [{theInvite.url}]({theInvite})\nuses: {theInvite.uses}/{theInvite.max_uses if theInvite.max_uses != 0 else 'inf' }\n{'|'.join(err)}",Colour=Colour.green())
-        try:
-            emb.set_thumbnail(str(member.avatar_url))
-        except:
-            pass
+        emb.set_thumbnail(url=member.avatar_url)
+
         await Joinchannel.send(embed=emb)
 
     @commands.Cog.listener(name="on_invite_create")
