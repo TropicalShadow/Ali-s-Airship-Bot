@@ -1,5 +1,5 @@
-from discord.ext.commands import Cog
 from utils.decorators import decorators
+from discord.ext.commands import Cog
 from discord import Embed, Colour
 from discord.ext import commands
 from os import environ, system
@@ -16,8 +16,8 @@ class Github(Cog):
         await ctx.send(embed=emb)
 
     @decorators.isTrop()
-    @decorators.typing
     @commands.command(name="update_git")
+    @decorators.typing
     async def update_git_command(self,ctx,*args,**kwargs):
         emb = Embed(description="Pull request sent....",colour=Colour.red())
         msg = await ctx.send(embed=emb)
@@ -25,6 +25,12 @@ class Github(Cog):
         emb.description = "Pull request finished..."
         emb.colour = Colour.green()
         await msg.edit(embed=emb)
+        if("--reload" in args):
+            emb.description = "Restarting Bot now...."
+            emb.colour = Colour.green()
+            await msg.edit(emb, delete_after=5)
+            quit()
+
        
        
     
