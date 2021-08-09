@@ -9,7 +9,7 @@ class JoinLeaveManager(Cog):
         self.bot = bot
         self.GuildInvites = []
         self.LastInvitesUpdate = datetime.now().timestamp()
-        self.joinleave_channel_id = 781143097299435550
+        self.joinleave_channel_id = 874069123531931669
 
 
     @commands.Cog.listener()
